@@ -8,7 +8,7 @@ import os, re, json, html, shutil
 from collections import defaultdict
 import pandas as pd
 
-BASE_URL = "https://example.com"          # ← 배포 도메인으로 교체
+BASE_URL = "https://brbrlim.github.io/assembly-vote"   # GitHub Pages 프로젝트 페이지
 OUT = "out"
 
 b = pd.read_csv("bills_22.csv", dtype=str)
