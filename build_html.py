@@ -57,6 +57,15 @@ TEMPLATE = r"""<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>좌우지간 · 국회 표결 피드</title>
+<meta name="description" content="22대 국회 표결을 시민 눈높이로 — 화제 법안, AI 개요, 정당별 표결, 의원별 기록을 한눈에.">
+<meta property="og:title" content="좌우지간 · 국회 표결 피드">
+<meta property="og:description" content="좌든 우든, 표결은 팩트로 — 22대 국회 표결 시민 데이터 피드">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brbrlim.github.io/assembly-vote/">
+<meta property="og:image" content="https://brbrlim.github.io/assembly-vote/og.png">
+<meta property="og:site_name" content="좌우지간">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://brbrlim.github.io/assembly-vote/og.png">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <style>
   * { box-sizing: border-box; }

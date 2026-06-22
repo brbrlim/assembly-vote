@@ -11,6 +11,7 @@ cp assembly_votes.html out/index.html
 
 echo "② 정적페이지·사이트맵 재생성 (build_static.py)…"
 python3 build_static.py >/dev/null
+python3 make_og.py >/dev/null      # 공유 썸네일 og.png
 touch out/.nojekyll
 
 echo "③ gh-pages 배포…"

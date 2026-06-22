@@ -94,7 +94,9 @@ PAGE = """<!DOCTYPE html><html lang="ko"><head>
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{ogt}"><meta property="og:description" content="{desc}">
 <meta property="og:type" content="article"><meta property="og:url" content="{url}">
-<meta name="twitter:card" content="summary"><link rel="canonical" href="{url}">
+<meta property="og:image" content="{ogimg}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:site_name" content="좌우지간">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{ogimg}"><link rel="canonical" href="{url}">
 <style>
  body{{font-family:-apple-system,"Apple SD Gothic Neo",sans-serif;max-width:720px;margin:0 auto;padding:18px;color:#1a1a1a;line-height:1.6}}
  .brandbar{{background:#16213e;margin:-18px -18px 0;padding:11px 18px}}
@@ -174,6 +176,7 @@ for r in b.itertuples():
             f'{" · <b style=color:"+PC.get(ppt,"#555")+">"+esc(ppt)+"</b>" if ppt else ""}</div>') if pp else ""
     page = PAGE.format(
         title=esc(head) + " | 22대 국회 표결", ogt=esc(head), desc=esc(desc), url=esc(url),
+        ogimg=f"{BASE_URL}/og.png",
         emoji=cmt_emoji(r.CURR_COMMITTEE), head=esc(head), name=esc(name),
         date=(r.dt.strftime("%Y-%m-%d") if pd.notna(r.dt) else "-"), cmt=esc(r.CURR_COMMITTEE or "-"),
         result=esc(r.PROC_RESULT_CD or "-"), no=esc(no), prop=prop, ovw=ovw, bar=bar, pvrows=pvrows,
