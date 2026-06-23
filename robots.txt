@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://brbrlim.github.io/assembly-vote/sitemap.xml
